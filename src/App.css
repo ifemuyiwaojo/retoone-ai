@@ -1,0 +1,552 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #000;
+  color: #fff;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  background-color: #111;
+  padding: 20px;
+  border-bottom: 1px solid #333;
+}
+
+.content {
+  display: flex;
+  flex: 1;
+}
+
+.sidebar {
+  width: 200px;
+  background-color: #111;
+  padding: 20px;
+  border-right: 1px solid #333;
+}
+
+.main-content {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.now-playing {
+  width: 300px;
+  background-color: #111;
+  padding: 20px;
+  border-left: 1px solid #333;
+}
+
+.prompt-section {
+  margin-bottom: 40px;
+}
+
+.input-box {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  background-color: #333;
+  border: none;
+  color: #fff;
+}
+
+.genre-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.genre-option, .subgenre-option {
+  background-color: #333;
+  border: none;
+  color: #fff;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+.genre-option.active, .genre-option:hover, .subgenre-option:hover {
+  background-color: #555;
+}
+
+.subgenre-options {
+  margin-top: 10px;
+}
+
+.section {
+  margin-bottom: 40px;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.show-all {
+  color: #1DB954;
+  text-decoration: none;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 20px;
+}
+
+.item {
+  text-align: center;
+}
+
+.item-image {
+  width: 100%;
+  padding-bottom: 100%;
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 10px;
+}
+
+.item-name {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.item-type {
+  font-size: 0.8em;
+  color: #888;
+}
+
+footer {
+  background-color: #111;
+  padding: 20px;
+  text-align: center;
+  border-top: 1px solid #333;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  margin-bottom: 20px;
+}
+
+.sidebar ul li a {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  text-decoration: none;
+}
+
+.sidebar ul li a svg {
+  margin-right: 10px;
+}
+
+header {
+  background-color: #111;
+  border-bottom: 1px solid #333;
+  padding: 0; /* Remove padding to allow image to fill the header */
+}
+
+.header-image {
+  width: 100%;
+  height: auto;
+  display: block; /* Removes any extra space below the image */
+}
+
+.genre-option, .subgenre-option {
+  background-color: #333;
+  border: none;
+  color: #fff;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 25px; /* This makes the buttons oval */
+  transition: all 0.3s ease; /* Smooth transition for color changes */
+  margin: 5px;
+}
+
+.genre-option:hover, .subgenre-option:hover {
+  background-color: #1DB954; /* Spotify green color */
+}
+
+.genre-option.active {
+  background-color: #1DB954; /* Spotify green color when active */
+  color: #000; /* Black text for contrast */
+}
+
+.subgenre-options {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.genre-options {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 10px;
+}
+
+.genre-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.genre-option, .subgenre-option {
+  background-color: #333;
+  border: none;
+  color: #fff;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+  width: 100%;
+  text-align: center;
+}
+
+.genre-option:hover, .subgenre-option:hover {
+  background-color: #1DB954;
+}
+
+.genre-option.active {
+  background-color: #1DB954;
+  color: #000;
+}
+
+.subgenre-options {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.subgenre-option {
+  margin-top: 5px;
+  width: 90%;
+}
+
+.subgenre-option.active {
+  background-color: #1DB954;
+  color: #000;
+}
+
+.item-image {
+  width: 100%;
+  padding-bottom: 100%; /* This creates a square aspect ratio */
+  background-size: cover;
+  background-position: center;
+  border-radius: 8px; /* Optional: if you want rounded corners */
+}
+
+.main-content {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.prompt-section {
+  width: 100%;
+  max-width: 800px; /* Adjust this value as needed */
+  margin-bottom: 40px;
+}
+
+.input-box {
+  width: 100%;
+  max-width: 600px; /* Adjust this value as needed */
+  padding: 10px;
+  margin: 20px auto;
+  background-color: #333;
+  border: none;
+  color: #fff;
+  text-align: center;
+}
+
+.genre-options {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  max-width: 800px; /* Adjust this value as needed */
+  margin: 0 auto;
+}
+
+.genre-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.section {
+  width: 100%;
+  max-width: 1000px; /* Adjust this value as needed */
+  margin-bottom: 40px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 20px;
+  justify-content: center;
+}
+
+.item {
+  text-align: center;
+  width: 100%;
+}
+
+.item-image {
+  width: 100%;
+  padding-bottom: 100%;
+  background-size: cover;
+  background-position: center;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.show-all {
+  color: #1DB954;
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1955px; /* Maximum width of the entire app */
+  margin: 0 auto;
+}
+
+.main-content {
+  max-width: 1655px; /* Maximum width of the main content area */
+  margin: 0 auto;
+}
+
+.prompt-section {
+  max-width: 1200px; /* For the search and genre selection area */
+  margin: 0 auto;
+}
+
+.input-box {
+  max-width: 800px; /* For the search input */
+  margin: 20px auto;
+}
+
+.genre-options {
+  max-width: 1200px; /* For the genre and subgenre buttons */
+  margin: 0 auto;
+}
+
+.section {
+  max-width: 1500px; /* For sections like Popular AI Artists and Albums */
+  margin: 0 auto;
+}
+
+.grid {
+  max-width: 1500px; /* For the grid of artists or albums */
+  margin: 0 auto;
+}
+
+@media (max-width: 1400px) {
+  .main-content {
+    max-width: 1200px;
+  }
+  .section, .grid {
+    max-width: 1100px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .main-content, .section, .grid {
+    max-width: 960px;
+  }
+  .prompt-section {
+    max-width: 800px;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-content, .section, .grid, .prompt-section {
+    max-width: 90%;
+  }
+  .input-box {
+    max-width: 100%;
+  }
+}
+
+.generate-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 800px;
+  margin: 20px auto;
+}
+
+.input-box {
+  flex-grow: 1;
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #333;
+  background-color: #222;
+  color: #fff;
+  border-radius: 5px 0 0 5px;
+  margin: 0;
+}
+
+.generate-button {
+  padding: 12px 24px;
+  font-size: 16px;
+  background-color: #1DB954; /* Spotify green */
+  color: #fff;
+  border: none;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.1s;
+}
+
+.generate-button:hover {
+  background-color: #1ed760; /* Lighter green on hover */
+}
+
+.generate-button:active {
+  transform: scale(0.98); /* Slight scale down when clicked */
+}
+
+@media (max-width: 768px) {
+  .generate-form {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .input-box, .generate-button {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+}
+
+.logo-container {
+  margin-bottom: 20px;
+  padding: 10px 0 10px 10px; /* Top, Right, Bottom, Left padding */
+}
+
+.logo-image {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  display: block;
+}
+
+/* Ensure the sidebar nav items are also left-aligned */
+.sidebar nav ul {
+  padding-left: 10px; /* Align with the logo */
+}
+
+.sidebar nav ul li {
+  margin-bottom: 20px;
+}
+
+.sidebar nav ul li a {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  text-decoration: none;
+}
+
+.sidebar nav ul li a svg {
+  margin-right: 10px;
+}
+
+.now-playing {
+  width: 300px;
+  background-color: #111;
+  padding: 20px;
+  border-left: 1px solid #333;
+  display: flex;
+  flex-direction: column;
+}
+
+.selected-item {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #333;
+}
+
+.item-image.large {
+  width: 100%;
+  height: 300px;
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 10px;
+  border-radius: 8px;
+}
+
+.item, .selected-item {
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.item:hover, .selected-item:hover {
+  transform: scale(1.05);
+}
+
+.now-playing {
+  width: 300px;
+  background-color: #111;
+  padding: 20px;
+  border-left: 1px solid #333;
+  display: flex;
+  flex-direction: column;
+}
+
+.selected-item {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #333;
+}
+
+.selected-image-container {
+  width: 100%;
+  height: 0;
+  padding-bottom: 100%; /* Creates a square aspect ratio */
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.selected-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* This ensures the image covers the area without stretching */
+}
+
+.item, .selected-item {
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.item:hover, .selected-item:hover {
+  transform: scale(1.05);
+}
+
