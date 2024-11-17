@@ -1,0 +1,13 @@
+{
+  "version": "v3",
+  "timestamp": 1731372167529,
+  "files": [
+    "src",
+    "server",
+    "public",
+    "package.json",
+    "tsconfig.json",
+    "vite.config.ts",
+    ".env"
+  ]
+}
